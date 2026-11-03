@@ -1,0 +1,7 @@
+# A 70-cell compact row: longer than the parser's directive-name buffer.
+BOXES = (70, 1);
+ANT = (1, 1, E);
+OUT = false;
+LOOP = 3;
+BOARD =
+WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW

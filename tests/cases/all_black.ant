@@ -1,0 +1,11 @@
+# All black: exercises removing cells from the black set.
+BOXES = (5, 5);
+ANT = (3, 3, N);
+OUT = false;
+LOOP = 50;
+BOARD =
+B B B B B
+B B B B B
+B B B B B
+B B B B B
+B B B B B

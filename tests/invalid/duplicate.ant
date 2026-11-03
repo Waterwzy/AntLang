@@ -1,0 +1,7 @@
+BOXES = (2, 2);
+BOXES = (2, 2);
+ANT = (1, 1, E);
+OUT = true;
+BOARD =
+W W
+W W

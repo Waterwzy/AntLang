@@ -1,0 +1,12 @@
+# The reference sample: the ant leaves the board at step 8.
+BOXES = (6, 6);
+ANT = (3, 3, E);
+OUT = true;
+LOOP = 100;
+BOARD =
+B W B B B B
+W W W W W W
+B B B B B B
+W W W W W W
+B B B B B B
+W W W W W W

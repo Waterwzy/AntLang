@@ -1,0 +1,9 @@
+# The ant starts outside the declared box, on the infinite white plane.
+BOXES = (3, 3);
+ANT = (0, 0, N);
+OUT = false;
+LOOP = 20;
+BOARD =
+W W W
+W B W
+W W W

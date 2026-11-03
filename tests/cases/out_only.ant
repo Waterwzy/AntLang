@@ -1,0 +1,7 @@
+# OUT alone is enough: stop as soon as the ant leaves the board.
+BOXES = (2, 2);
+ANT = (1, 1, E);
+OUT = true;
+BOARD =
+W W
+W W

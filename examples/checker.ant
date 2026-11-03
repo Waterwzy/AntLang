@@ -1,0 +1,16 @@
+# A checkerboard: the alternating colours send the ant off the edge quickly.
+# OUT stops it as soon as it leaves, or LOOP stops it after 300 steps,
+# whichever happens first.
+BOXES = (8, 8);
+ANT = (4, 4, N);
+OUT = true;
+LOOP = 300;
+BOARD =
+B W B W B W B W
+W B W B W B W B
+B W B W B W B W
+W B W B W B W B
+B W B W B W B W
+W B W B W B W B
+B W B W B W B W
+W B W B W B W B

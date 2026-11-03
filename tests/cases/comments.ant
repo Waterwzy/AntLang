@@ -1,0 +1,10 @@
+# Comments, tabs, CRLF-ish spacing and optional semicolons.
+   # leading comment
+BOXES = (  3 , 2 ) ;   # dimensions
+ANT = ( 1 , 2 , n ) ;
+OUT = TRUE ;
+LOOP = 7 ;             // both rules are present
+BOARD =
+B W B ;
+W W W ;
+

@@ -1,0 +1,12 @@
+# A short run on a blank field.  The ant soon leaves the declared 5x5 box;
+# use --view bbox if you want to see every cell it painted outside.
+BOXES = (5, 5);
+ANT = (3, 3, E);
+OUT = false;
+LOOP = 50;
+BOARD =
+W W W W W
+W W W W W
+W W W W W
+W W W W W
+W W W W W

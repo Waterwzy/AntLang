@@ -1,0 +1,12 @@
+# Both rules apply on step 8: leaving the board wins over the loop limit.
+BOXES = (6, 6);
+ANT = (3, 3, E);
+OUT = true;
+LOOP = 8;
+BOARD =
+B W B B B B
+W W W W W W
+B B B B B B
+W W W W W W
+B B B B B B
+W W W W W W

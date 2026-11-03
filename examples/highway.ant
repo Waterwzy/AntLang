@@ -1,0 +1,24 @@
+# A blank 16x16 field.  From an all-white board Langton's ant wanders for
+# roughly ten thousand steps and then starts building its periodic "highway".
+# Use --view bbox to see the part of the infinite plane that it has visited.
+BOXES = (16, 16);
+ANT = (8, 8, E);
+OUT = false;
+LOOP = 12000;
+BOARD =
+W W W W W W W W W W W W W W W W
+W W W W W W W W W W W W W W W W
+W W W W W W W W W W W W W W W W
+W W W W W W W W W W W W W W W W
+W W W W W W W W W W W W W W W W
+W W W W W W W W W W W W W W W W
+W W W W W W W W W W W W W W W W
+W W W W W W W W W W W W W W W W
+W W W W W W W W W W W W W W W W
+W W W W W W W W W W W W W W W W
+W W W W W W W W W W W W W W W W
+W W W W W W W W W W W W W W W W
+W W W W W W W W W W W W W W W W
+W W W W W W W W W W W W W W W W
+W W W W W W W W W W W W W W W W
+W W W W W W W W W W W W W W W W

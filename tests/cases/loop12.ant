@@ -1,0 +1,10 @@
+# OUT = false: the board is an endless white plane, so LOOP is required.
+BOXES = (4, 4);
+ANT = (2, 2, E);
+OUT = false;
+LOOP = 12;
+BOARD =
+W W W W
+W W W W
+W W W W
+W W W W

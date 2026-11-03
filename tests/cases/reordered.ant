@@ -1,0 +1,9 @@
+# Compact rows, directives in a different order, inline first BOARD row.
+ANT = (2, 2, S);
+LOOP = 5;
+BOARD = W B W B
+W B B W
+B W B W
+W W W B
+BOXES = (4, 4);
+OUT = true;

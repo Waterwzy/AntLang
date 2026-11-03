@@ -1,0 +1,8 @@
+# LOOP = 0 means zero steps: report the initial state.
+BOXES = (3, 3);
+ANT = (2, 2, E);
+LOOP = 0;
+BOARD =
+B W B
+W B W
+B W B
