@@ -1,0 +1,9 @@
+BOXES = (6, 3);
+ANT = (2, 2, N);
+OUT = true;
+LOOP = 100000;
+
+BOARD =
+B B W W W W
+W W B W B W
+W W B B W W

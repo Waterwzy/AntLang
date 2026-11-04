@@ -13,7 +13,7 @@ BOXES 声明黑板，ANT 放下蚂蚁，BOARD 画出初始黑白格。
 ```
 
 - 语言规范：[SPEC.md](SPEC.md)
-- 示例程序：[test.ant](test.ant)
+- 示例 helloworld 程序：[helloworld.ant](helloworld.ant)
 - 高速公路示例：[examples/highway.ant](examples/highway.ant)
 
 ---
@@ -24,7 +24,7 @@ BOXES 声明黑板，ANT 放下蚂蚁，BOARD 画出初始黑白格。
 
 ```bat
 build.bat
-build\antc.exe run test.ant
+build\antc.exe run helloworld.ant
 ```
 
 `build.bat` 会通过 `vswhere` 自动找到 Visual Studio 的 C++ 工具链，并在
@@ -33,27 +33,24 @@ build\antc.exe run test.ant
 运行示例：
 
 ```text
-> build\antc.exe run test.ant
-BOXES = (6, 6)
-B W B B B B
-W W B B B B
-B B W W W W
-W W W W W W
-B B B B B B
-W W W W W W
-ANT = (7, 3, E)
-STEPS = 8
+> build\antc.exe run helloworld.ant
+BOXES = (6, 3)
+B W B W W W
+W W W B B W
+W W B B W W
+ANT = (4, 0, N)
+STEPS = 12
 HALT = OUT
 ```
 
-`test.ant` 里的 `LOOP = 100` 还没用完，蚂蚁在第 8 步就走出 6×6 棋盘，
+`test.ant` 里的 `LOOP = 100000` 还没用完，蚂蚁在第 12 步就走出 6×3 棋盘，
 因此 `HALT = OUT`。
 
 ### Linux / macOS / MinGW
 
 ```sh
 make
-./antc run test.ant
+./antc run helloworld.ant
 ```
 
 也可以使用 CMake：
@@ -67,13 +64,13 @@ cmake --build build
 
 ```bat
 :: 生成独立的 C99 源文件
-build\antc.exe emit test.ant -o test.c
+build\antc.exe emit helloworld.ant -o test.c
 
 :: 生成可执行文件；默认输出 test.exe
-build\antc.exe build test.ant
+build\antc.exe build helloworld.ant
 
 :: 指定输出名和编译器
-build\antc.exe build test.ant -o demo.exe --cc cl
+build\antc.exe build helloworld.ant -o helloworld.exe --cc cl
 ```
 
 `antc build` 在 Windows 上会自动探测 MSVC（通过 `vswhere` +
@@ -84,20 +81,18 @@ build\antc.exe build test.ant -o demo.exe --cc cl
 
 ## 2. 语言
 
-### 2.1 一个完整程序
+### 2.1 一个完整程序(hellowrold)
 
 ```ant
-BOXES = (6, 6);
-ANT = (3, 3, E);
+BOXES = (6, 3);
+ANT = (2, 2, N);
 OUT = true;
-LOOP = 100;
+LOOP = 100000;
+
 BOARD =
-B W B B B B
-W W W W W W
-B B B B B B
-W W W W W W
-B B B B B B
-W W W W W W
+B B W W W W
+W W B W B W
+W W B B W W
 ```
 
 | 指令 | 必需 | 含义 |
@@ -113,9 +108,11 @@ W W W W W W
 - 指令末尾的分号可选；`BOARD` 行末尾的分号也可选。
 - 棋盘行可以写成 `B W B W`，也可以写成紧凑的 `BWBW`。
 - 指令顺序任意；`BOARD` 后面直到下一条指令都是棋盘行。
-- **只接受 `BOXES`**，不接受 `BOX`（`test.ant` 用的就是 `BOXES`）。
+- **只接受 `BOXES`**，不接受 `BOX`（`helloworld.ant` 用的就是 `BOXES`）。
 
 详细语法和限制见 [SPEC.md](SPEC.md)。
+
+> 该程序是 `AntLang` 官方的 helloworld 程序（暂定），第一行从第一个格子开始可以输入 n 个 B，停机轮数即为 $(n + 1) \times 4$。
 
 ### 2.2 坐标与方向
 
@@ -404,7 +401,7 @@ Windows 上如果 `build\antc.exe` 还不存在，先运行 `build.bat`。测试
 ├── CMakeLists.txt
 ├── SPEC.md                # 语言规范
 ├── README.md
-├── test.ant               # 根目录示例
+├── helloworld.ant         # 根目录实例 helloworld 程序
 ├── src/
 │   ├── antc.h
 │   ├── main.c             # CLI
